@@ -10,16 +10,17 @@ export function addCountries(countries) {
 }
 
 export function singleCountry([country]) {
-    const {
-        flags: { svg },
-        name: { official },
-        capital,
-        population,
-        languages } = country;
+  const {
+    flags: { svg },
+    name: { official },
+    capital,
+    population,
+    languages,
+  } = country;
   const oneCountryMarkup = `<img width=40 src="${svg}" alt="${official}"/>
     <h2>${official}</h2>
     <p><b>Capital:</b> ${capital}</p>
     <p><b>Population:</b> ${population}</p>
-    <p><b>Languages:</b> ${Object.values(languages).join(", ")}</p>`;
+    <p><b>Languages:</b> ${Object.values(languages).join(', ')}</p>`;
   refs.formDiv.innerHTML = oneCountryMarkup;
 }
